@@ -15,5 +15,6 @@ To make your own parts category unlockable in creature stage, simply have this m
 2. Include the property `bool paletteCategoryUnlockable true` in your custom category definition (Usually in `creature_editor_palette_categories~`)
 3. Create a collections entry for your palette page in `AssetBrowserCRGCollections` and `AssetBrowserFeedItems`. Examples of these files can be found in [/SMFX Projects/ExampleProject/](https://github.com/Valla-Chan/Valla_Spore_CreaturePartUnlockAPI/tree/main/SMFX%20Project/ExampleProject)
 4. Make sure that your collections entry in `AssetBrowserFeedItems` references the file in `creature_editor_palette_categories~` as its `feedListItemUniqueID`.
-
+<br>
+<br>
 You should now be able to see your custom parts unlocking ingame!
