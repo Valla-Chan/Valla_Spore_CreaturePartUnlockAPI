@@ -1,4 +1,4 @@
-# Creature Part Unlocking API
+# Creature Part Unlock API
 
 This Spore mod allows users to unlock creature parts from custom categories in creature stage, and provides a framework for modders to enable this in their own mods.
 
