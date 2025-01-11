@@ -1,0 +1,12 @@
+key parent Adventure_brushes~!0x0E904976.prop
+keys paletteCategoryIconList
+	editors_creature~!button-category-norm.png
+	# your icons here, as usual
+end
+texts paletteCategoryName
+	"Your Category Name"
+end
+uint32 paletteCategorySequenceNumber 100
+
+# Important! This makes your category unlockable ingame!
+bool paletteCategoryUnlockable true
