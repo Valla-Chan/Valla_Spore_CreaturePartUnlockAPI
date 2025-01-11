@@ -1,0 +1,10 @@
+string8s postinitList
+	"category_DI_cell partunlock_PostInit"
+	"category_Hyura_cell partunlock_PostInit"
+end
+
+key category_DI_cell creature_editor_palette_categories~!DI_CellParts
+key category_Hyura_cell creature_editor_palette_categories~!ce_category_hyura_cell
+#
+key partunlock_PostInit partunlock_postinits!partunlock_PostInit
+

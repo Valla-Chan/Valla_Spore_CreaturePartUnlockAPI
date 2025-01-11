@@ -1,0 +1,17 @@
+key parent Adventure_brushes~!0x0E904976.prop
+keys paletteCategoryIconList
+	editors_creature~!button-dscell-norm.png
+	editors_creature~!button-dscell-off.png
+	editors_creature~!button-dscell-hl.png
+	editors_creature~!button-dscell-act.png
+	editors_creature~!button-dscell-on-norm.png
+	editors_creature~!button-dscell-off.png
+	editors_creature~!button-dscell-on-hl.png
+	editors_creature~!button-dscell-on-act.png
+	editors_creature~!button-dscell-norm.png
+end
+texts paletteCategoryName
+	(DI_categoryNames_CE!0x00000001) "Cell Parts"
+end
+uint32 paletteCategorySequenceNumber 9999
+bool paletteCategoryUnlockable true

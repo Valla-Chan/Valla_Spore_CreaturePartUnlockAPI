@@ -1,0 +1,10 @@
+# Template
+key feedListItemIconKey editors_creature~!button-category-norm.png
+texts feedListItemName
+	"Your Category Name"
+end
+uint32 feedListItemUniqueID hash(ce_category_yourCategory) # points to a creature editor category filename
+
+# Do not change
+key feedListItemMessageID 0x5BF34455
+key feedListItemType FeedItemMessage

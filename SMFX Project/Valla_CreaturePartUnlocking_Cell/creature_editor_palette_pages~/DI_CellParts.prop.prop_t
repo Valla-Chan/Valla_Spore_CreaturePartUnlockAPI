@@ -1,0 +1,8 @@
+key parent palette_config~!TemplatePalettePartsPage.prop
+string16 description "CellXtend"
+key paletteCategoryIcon editors_building~!0x12299CC0.png
+float palettePageItemPercentageWidth 0.25
+key palettePageParentCategory creature_editor_palette_categories~!DI_CellParts
+uint32 palettePageSequenceNumber 100
+int32 palettePageSetId 1
+float 0xE55063E9 0.12

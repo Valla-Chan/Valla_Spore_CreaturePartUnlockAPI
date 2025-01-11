@@ -1,0 +1,7 @@
+key feedListItemIconKey editors_creature~!button-dscell-norm.png
+key feedListItemMessageID 0x5BF34455
+texts feedListItemName
+	(CE!0xdfad9f51) "Cell"
+end
+key feedListItemType FeedItemMessage
+uint32 feedListItemUniqueID hash(DI_CellParts)
