@@ -33,3 +33,5 @@
 *.vsidx
 /.vs
 /Valla_CreaturePartUnlocking/Debug
+/Valla_CreaturePartUnlocking/Release
+/SMFX Projects/CreaturePartUnlockAPI.sporemod

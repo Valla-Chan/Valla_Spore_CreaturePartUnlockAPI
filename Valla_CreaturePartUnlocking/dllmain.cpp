@@ -5,8 +5,18 @@
 
 CRG_EditorLoad* editorload;
 
+///  Set this to True to unlock parts from ALL modded categories
+///  This will be set by detecting the presence of a certain mod file in an optional package.
+bool bUnlockAll = false;
+
 void Initialize()
 {
+	// Should we unlock all categories
+	PropertyListPtr propList;
+	if (PropManager.GetPropertyList(id("creaturepartunlocks_all"), 0x0, propList)) {
+		bUnlockAll = true;
+	}
+
 	AddCategories();
 	editorload = new(CRG_EditorLoad);
 }
@@ -29,10 +39,6 @@ static const eastl::hash_set<uint32_t> editorCategories = {
 
 ///  Store the category IDs that we should or should not unlock
 static eastl::hash_map<uint32_t, bool> moddedCategoriesUnlock;
-
-///  Set this to True to unlock parts from ALL modded categories
-///  TODO: This will be set by detecting the presence of a certain mod file in an optional package.
-bool bUnlockAll = false;
 
 member_detour(PalettePageLoad_detour, Palettes::PalettePage, bool(const ResourceKey&, uint32_t, uint32_t, uint32_t, uint32_t))
 {
@@ -68,15 +74,15 @@ member_detour(PalettePageLoad_detour, Palettes::PalettePage, bool(const Resource
 
 		if (editorload) {
 			
-			// in order to not break Collections, do not run in creature stage
-			if (!editorload->mbEditorActive && !IsCreatureGame()) {
+			// in order to not break Collections, only run when editor is inactive
+			if (!editorload->mbEditorActive ) { //&& !IsCreatureGame() // this failsafe is too aggressive and breaks the game
 				// run this mode check because the way to get into creature stage is from these modes.
 				auto mode = GameModeManager.GetActiveModeID();
 				if (mode == kGameCell || mode == kGGEMode || mode == kLoadGameMode) {
 
 					// Only run on valid modded categories
 					if (ShouldAddCategoryUnlock()) {
-						this->mParentCategory = ResourceKey(id("ce_category_mouths"), TypeIDs::Names::prop, 0x406B6E0C); // re-sort into details category
+						this->mParentCategory = ResourceKey(id("ce_category_details"), TypeIDs::Names::prop, 0x406B6E0C); // re-sort into details category
 					}
 				}
 				
